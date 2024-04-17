@@ -45,7 +45,35 @@ class Sistema {
         System.out.println("(0) Sair");
         System.out.print("Opção: ");
     }
-private static void cadastrar() { }
+private static void cadastrar() {
+    System.out.println("\n===== Cadastro de Usuário =====\n");
+        System.out.print("Nome: ");
+        String nome = Console.lerString();
+        System.out.print("Email: ");
+        String email = Console.lerString();
+        System.out.print("Tipo (1 - Professor, 2 - Coordenador, 3 - Diretor): ");
+        int tipo = Console.lerInt();
+
+        Usuario novoUser = null;
+        switch (tipo) {
+            case 1:
+                novoUser = cadstrProf(nome, email);
+                break;
+            case 2:
+                novoUser = cadstrCoord(nome, email);
+                break;
+            case 3:
+                novoUser = cadstrDiret(nome, email);
+                break;
+            default:
+                System.out.println("usuário inválido.");
+        }
+
+        if (novoUser != null) {
+            Usuario.getListaUsers().add(novoUser);
+            System.out.println("Usuário cadastrado.");
+        }
+}
 
 private static void buscar() { }
 

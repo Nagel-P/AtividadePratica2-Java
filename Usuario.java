@@ -47,3 +47,9 @@ abstract class Usuario {
         return "Nome: " + nome + ", Email: " + email + ", Profissão: " + profissao;
     }
 }
+
+class Professor extends Usuario {
+    public Professor(String nome, String email) {
+        super(nome, email, "Professor");
+    }
+}

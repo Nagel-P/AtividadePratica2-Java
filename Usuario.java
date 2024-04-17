@@ -59,3 +59,9 @@ class Coordenador extends Usuario {
         super(nome, email, "Coordenador");
     }
 }
+
+class Diretor extends Usuario {
+    public Diretor(String nome, String email) {
+        super(nome, email, "Diretor");
+    }
+}

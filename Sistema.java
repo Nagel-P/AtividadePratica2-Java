@@ -45,3 +45,14 @@ class Sistema {
         System.out.println("(0) Sair");
         System.out.print("Opção: ");
     }
+private static void cadastrar() { }
+
+private static void buscar() { }
+
+ private static void editar() { }
+
+private static void excluir() { }
+
+private static void listar() { }
+
+private static void excluirTodos() { }

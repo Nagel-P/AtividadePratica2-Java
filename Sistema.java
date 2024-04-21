@@ -133,6 +133,11 @@ private static void excluir() {
         System.out.println("Usuário não encontrado.");
     }
 
-private static void listar() { }
+ private static void listar() {
+        System.out.println("\n===== Lista de Usuários =====\n");
+        for (Usuario usuario : Usuario.getListaUsers()) {
+            System.out.println(usuario);
+        }
+    }
 
 private static void excluirTodos() { }

@@ -95,7 +95,27 @@ private static void buscar() {
         }
     }
 
- private static void editar() { }
+ private static void editar() {
+        System.out.println("\n===== Edição de Usuário =====\n");
+        System.out.print("Email do usuário: ");
+        String email = Console.lerString();
+
+        for (Usuario usuario : Usuario.getListaUsers()) {
+            if (usuario.getEmail().equals(email)) {
+                System.out.println("Usuário encontrado:");
+                System.out.println(usuario);
+
+                System.out.println("Novo nome: ");
+                String novoNome = Console.lerString();
+                usuario.setNome(novoNome);
+
+                System.out.println("Usuário editado.");
+                return;
+            }
+        }
+
+        System.out.println("Usuário não encontrado.");
+    }
 
 private static void excluir() { }
 

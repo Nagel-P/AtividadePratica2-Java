@@ -75,7 +75,25 @@ private static void cadastrar() {
         }
 }
 
-private static void buscar() { }
+private static void buscar() {
+        System.out.println("\n===== Busca de Usuário =====\n");
+        System.out.print("Email do usuário: ");
+        String email = Console.lerString();
+
+        boolean encontrado = false;
+        for (Usuario usuario : Usuario.getListaUsers()) {
+            if (usuario.getEmail().equals(email)) {
+                System.out.println("Usuário encontrado:");
+                System.out.println(usuario);
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("Usuário não encontrado.");
+        }
+    }
 
  private static void editar() { }
 

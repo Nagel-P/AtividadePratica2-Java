@@ -140,4 +140,7 @@ private static void excluir() {
         }
     }
 
-private static void excluirTodos() { }
+private static void excluirTodos() {
+        Usuario.getListaUsers().clear();
+        System.out.println("Todos os usuários excluídos.\n");
+    }

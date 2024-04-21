@@ -117,7 +117,21 @@ private static void buscar() {
         System.out.println("Usuário não encontrado.");
     }
 
-private static void excluir() { }
+private static void excluir() {
+        System.out.println("\n===== Exclusão de Usuário =====\n");
+        System.out.print("Email do usuário: ");
+        String email = Console.lerString();
+
+        for (Usuario usuario : Usuario.getListaUsers()) {
+            if (usuario.getEmail().equals(email)) {
+                Usuario.getListaUsers().remove(usuario);
+                System.out.println("Usuário excluído.");
+                return;
+            }
+        }
+
+        System.out.println("Usuário não encontrado.");
+    }
 
 private static void listar() { }
 
